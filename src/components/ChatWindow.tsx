@@ -97,9 +97,9 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex flex-col bg-[url('/mask.png')] bg-cover bg-center">
-      {/* Header */}
-      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-4 w-full z-10">
+    <div className="h-screen flex flex-col bg-[url('/mask.png')] bg-cover bg-center">
+      {/* Header - Fixed at top */}
+      <div className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-4 z-10">
         <div className="flex items-center space-x-4">
           <button
             onClick={onBack}
@@ -115,8 +115,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
         </div>
       </div>
 
-      {/* Messages */}
-      <div className="flex-1 px-4 py-6 space-y-4 overflow-y-auto">
+      {/* Messages - Scrollable with padding for fixed header */}
+      <div className="flex-1 px-4 py-6 space-y-4 overflow-y-auto mt-[72px]">
         <div className="flex justify-center flex-col items-center mb-4">
           <span className="text-xs font-medium text-gray-600 py-2 px-1 bg-[#fefdfd] rounded">
             Today
@@ -185,7 +185,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
+      {/* Input - Fixed at bottom */}
       <div className="bg-white/80 backdrop-blur-lg border-t border-gray-200/50 px-4 py-4">
         <div className="flex items-center space-x-3">
           <input
