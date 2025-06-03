@@ -30,7 +30,7 @@ const MessagingScreen = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-3 sticky top-0 z-10  flex justify-between items-center">
+      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-3 fixed top-0 z-10  flex justify-between items-center">
         <div className="flex items-center gap-3">
           <MdOutlineKeyboardArrowLeft className="text-[#1c1b1b] text-[30px]" />
           <div className="flex items-center gap-3">
