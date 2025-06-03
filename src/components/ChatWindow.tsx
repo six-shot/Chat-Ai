@@ -19,7 +19,7 @@ interface Message {
   showPaymentButton?: boolean;
 }
 
-const ChatWindow: React.FC<ChatWindowProps> = ({ chatId, onBack }) => {
+const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
