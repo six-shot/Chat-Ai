@@ -6,7 +6,6 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 
-
 const MessagingScreen = () => {
   const [selectedChat, setSelectedChat] = useState<string | null>(null);
 
@@ -30,14 +29,12 @@ const MessagingScreen = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-3 fixed top-0 z-10  flex justify-between items-center">
+      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-3 fixed w-full top-0 z-10  flex justify-between items-center">
         <div className="flex items-center gap-3">
           <MdOutlineKeyboardArrowLeft className="text-[#1c1b1b] text-[30px]" />
           <div className="flex items-center gap-3">
             <FaUserCircle className="text-[36px] text-[#9598a3] " />
-            <h6 className="text-[#1c1b1b] text-[16px] ">
-              Testuser
-            </h6>
+            <h6 className="text-[#1c1b1b] text-[16px] ">Testuser</h6>
           </div>
         </div>
         <div className="flex gap-2 items-center">
@@ -46,7 +43,7 @@ const MessagingScreen = () => {
       </div>
 
       {/* Chat List */}
-      <div className="px-4 py-6 space-y-3">
+      <div className="px-4 py-6 space-y-3 pt-18">
         {aiChats.map((chat) => (
           <div
             key={chat.id}
@@ -54,9 +51,8 @@ const MessagingScreen = () => {
             className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 hover:bg-white/90 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
           >
             <div className="flex items-center space-x-4">
-              
-                <FaUserCircle className="text-[40px] text-[#9598a3] " />
-            
+              <FaUserCircle className="text-[40px] text-[#9598a3] " />
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-gray-900 truncate">

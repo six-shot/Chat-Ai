@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import PaymentModal from "./PaymentModal";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { FaDollarSign, FaUserCircle } from "react-icons/fa";
+import { FaDollarSign, FaLock, FaUserCircle } from "react-icons/fa";
 import { VscSend } from "react-icons/vsc";
 
 interface ChatWindowProps {
@@ -117,6 +117,17 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
 
       {/* Messages */}
       <div className="flex-1 px-4 py-6 space-y-4 overflow-y-auto">
+        <div className="flex justify-center flex-col items-center mb-4">
+          <span className="text-xs font-medium text-gray-600 py-2 px-1 bg-[#fefdfd] rounded">Today</span>
+          <div className="bg-yellow-100 rounded-2xl px-4 py-3 max-w-xs">
+            <div className="flex items-center space-x-2 mb-2"></div>
+            <p className="text-xs text-gray-700 text-center">
+              🔒 Messages and calls are end-to-end encrypted. Only people in
+              this chat can read, listen to, or share them.{" "}
+              <span className="font-medium">Learn more</span>
+            </p>
+          </div>
+        </div>
         {messages.map((message) => (
           <div
             key={message.id}
@@ -144,7 +155,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
                   onClick={() => setShowPaymentModal(true)}
                   className="mt-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2"
                 >
-                  <FaDollarSign/>
+                  <FaDollarSign />
                   <span>Make Payment</span>
                 </button>
               )}
