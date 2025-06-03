@@ -97,13 +97,13 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
   };
 
   return (
-    <div className="h-[100dvh] bg-[url('/mask.png')]  bg-cover bg-center flex flex-col">
+    <div className="fixed inset-0 flex flex-col bg-[url('/mask.png')] bg-cover bg-center">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-4 fixed w-full top-0 z-10">
+      <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-4 w-full z-10">
         <div className="flex items-center space-x-4">
           <button
             onClick={onBack}
-            className=" flex items-center justify-center transition-colors"
+            className="flex items-center justify-center transition-colors"
           >
             <MdOutlineKeyboardArrowLeft className="text-[#1c1b1b] text-[30px]" />
           </button>
@@ -116,9 +116,11 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 px-4 py-6 space-y-4 overflow-y-auto mt-18">
+      <div className="flex-1 px-4 py-6 space-y-4 overflow-y-auto">
         <div className="flex justify-center flex-col items-center mb-4">
-          <span className="text-xs font-medium text-gray-600 py-2 px-1 bg-[#fefdfd] rounded">Today</span>
+          <span className="text-xs font-medium text-gray-600 py-2 px-1 bg-[#fefdfd] rounded">
+            Today
+          </span>
           <div className="bg-yellow-100 rounded-2xl px-4 py-3 max-w-xs">
             <div className="flex items-center space-x-2 mb-2"></div>
             <p className="text-xs text-gray-700 text-center">
