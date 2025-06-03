@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CiCreditCard1 } from "react-icons/ci";
 import { FaCheck, FaLock } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
@@ -75,7 +76,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
                   placeholder="0"
-                  className="w-full pl-12 pr-4 py-4 text-3xl font-bold text-center border-2 border-gray-200 rounded-2xl focus:border-blue-500 focus:outline-none transition-colors bg-gray-50"
+                  className="w-full pl-12 pr-4 py-4 text-3xl font-bold text-center border-2 border-gray-200 rounded-2xl focus:border-black focus:outline-none transition-colors bg-gray-50"
                 />
               </div>
             </div>
@@ -95,7 +96,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
             <button
               onClick={handleAmountSubmit}
               disabled={!amount || parseFloat(amount) <= 0}
-              className="w-full bg-blue-600 text-white py-4 rounded-2xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+              className="w-full bg-black text-white py-4 rounded-2xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
             >
               Continue
             </button>
@@ -128,7 +129,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
               <p className="text-sm text-gray-600 mb-2">Sent to</p>
               <div className="bg-gray-50 rounded-2xl p-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
                     <span className="text-white font-semibold text-sm">AI</span>
                   </div>
                   <div>
@@ -153,7 +154,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
                       <p className="text-sm text-gray-600">••••1234</p>
                     </div>
                   </div>
-                  <button className="text-blue-600 text-sm font-medium">
+                  <button className="text-black text-sm font-medium">
                     Change
                   </button>
                 </div>
@@ -176,7 +177,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
             <div className="space-y-3">
               <button
                 onClick={handleConfirmPayment}
-                className="w-full bg-blue-600 text-white py-4 rounded-2xl font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                className="w-full bg-black text-white py-4 rounded-2xl font-semibold hover:bg-black transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Pay using UPI</span>
               </button>
@@ -185,7 +186,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
                 onClick={handleConfirmPayment}
                 className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center space-x-2"
               >
-                credit card
+                <CiCreditCard1/>
                 <span>Pay using Card</span>
               </button>
             </div>
@@ -197,7 +198,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
           <div className="p-6 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaLock className="w-8 h-8 text-blue-600" />
+                <FaLock className="w-8 h-8 text-black" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">
                 ₹{amount}
@@ -210,13 +211,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
 
             <div className="flex justify-center">
               <div className="flex space-x-1">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                <div className="w-2 h-2 bg-black rounded-full animate-bounce"></div>
                 <div
-                  className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+                  className="w-2 h-2 bg-black rounded-full animate-bounce"
                   style={{ animationDelay: "0.1s" }}
                 ></div>
                 <div
-                  className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+                  className="w-2 h-2 bg-black rounded-full animate-bounce"
                   style={{ animationDelay: "0.2s" }}
                 ></div>
               </div>
@@ -253,7 +254,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ onClose }) => {
             <div className="space-y-3">
               <button
                 onClick={handleClose}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                className="w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-black transition-colors"
               >
                 Done
               </button>
