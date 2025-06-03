@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Extralight.otf");
+  font-weight: 200;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Light.otf");
+  font-weight: 300;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Bold.otf");
+  font-weight: 700;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nippo";
+  font-weight: 700;
 }
