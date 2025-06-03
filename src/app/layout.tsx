@@ -7,60 +7,6 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
 
-  function InstallPrompt() {
-    const [isIOS, setIsIOS] = useState(false);
-    const [isStandalone, setIsStandalone] = useState(false);
-    const [hasUserInstalled, setHasUserInstalled] = useState(false);
-
-    useEffect(() => {
-      // Check if user has previously installed
-      const installed = localStorage.getItem("appInstalled") === "true";
-      setHasUserInstalled(installed);
-
-      setIsIOS(
-        /iPad|iPhone|iPod/.test(navigator.userAgent) && !("MSStream" in window)
-      );
-
-      // Check if app is in standalone mode
-      const standalone = window.matchMedia(
-        "(display-mode: standalone)"
-      ).matches;
-      setIsStandalone(standalone);
-
-      // If app is in standalone mode, mark as installed
-      if (standalone) {
-        localStorage.setItem("appInstalled", "true");
-        setHasUserInstalled(true);
-      }
-    }, []);
-
-    // Don't show install button if already installed or previously dismissed
-    if (isStandalone || hasUserInstalled) {
-      return null;
-    }
-
-    return (
-      <div>
-        <Marquee>
-          {isIOS && (
-            <p className="font-[family-name:var(--font-manrope)] bg-[#034239] text-white">
-              To install this app on your iOS device, tap the share button
-              <span role="img" aria-label="share icon">
-                {" "}
-                ⎋{" "}
-              </span>
-              and then &quot;Add to Home Screen&quot;
-              <span role="img" aria-label="plus icon">
-                {" "}
-                ➕{" "}
-              </span>
-              .
-            </p>
-          )}
-        </Marquee>
-      </div>
-    );
-  }
 
   // function PushNotificationManager() {
   //   const [isSupported, setIsSupported] = useState(false);
@@ -159,7 +105,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={` antialiased`}>
         {children}
-        <InstallPrompt />
+       
       </body>
     </html>
   );

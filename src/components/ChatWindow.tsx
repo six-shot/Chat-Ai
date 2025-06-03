@@ -97,7 +97,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/mask.png')]  bg-cover bg-center flex flex-col">
+    <div className="h-[100dvh] bg-[url('/mask.png')]  bg-cover bg-center flex flex-col">
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 px-4 py-4 sticky top-0 z-10">
         <div className="flex items-center space-x-4">
