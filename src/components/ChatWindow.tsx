@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import PaymentModal from "./PaymentModal";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { FaDollarSign, FaLock, FaUserCircle } from "react-icons/fa";
+import { FaDollarSign, FaUserCircle } from "react-icons/fa";
 import { VscSend } from "react-icons/vsc";
 
 interface ChatWindowProps {
