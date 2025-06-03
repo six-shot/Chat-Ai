@@ -3,8 +3,8 @@
 
 import "./globals.css";
 
-import Marquee from "react-fast-marquee";
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 
 
 
